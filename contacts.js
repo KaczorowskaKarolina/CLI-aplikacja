@@ -34,7 +34,7 @@ function getContactById(contactId) {
 
     try {
       const contacts = JSON.parse(data);
-      const contact = contacts.find(c => c.id === contactId.toString());
+      const contact = contacts.find(c => c.id === contactId);
 
       if (contact) {
         console.table([contact]);

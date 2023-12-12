@@ -1,8 +1,20 @@
-const argv = require("yargs").argv;
-const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
+const { Command } = require("commander");
+const program = new Command();
 
-// TODO: refaktor
+program
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
+
+program.parse(process.argv);
+
+const args = program.opts();
+
 function invokeAction({ action, id, name, email, phone }) {
+  const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
+
   switch (action) {
     case "list":
       listContacts();
@@ -25,5 +37,4 @@ function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-invokeAction(argv);
-
+invokeAction(args);
