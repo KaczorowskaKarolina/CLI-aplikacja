@@ -2,7 +2,7 @@
 
 ---
 
-A simple app to store your phone book contacts.
+A simple app to store contacts.
 
 ## Introduction
 
@@ -11,9 +11,7 @@ A simple app to store your phone book contacts.
 CLI console application (command-line interface). The application uses the commander module to parse command line arguments. User can add,
 remove, filter by Id contacts and display a table with saved contacts.
 
-<!-- ![Phonebook - HOME](./src/home.jpg) ![Phonebook - Register](./src/register.jpg)
-![Phonebook - Login](./src/login.jpg)
-![Phonebook - Contacts](./src/contacts.jpg) -->
+![CLI-App - view](view.jpg)
 
 ## Technologies
 
@@ -33,9 +31,15 @@ remove, filter by Id contacts and display a table with saved contacts.
 ### Basic comedy in the terminal
 
 - node index.js --action list
-- node index.js --action get --id 'podaj szukane id'
+  ![CLI-App - actionList](actionList.jpg)
+- node index.js --action get --id 'enter the id you are looking for'
+  ![CLI-App - action-get--id](action-get--id.jpg)
 - node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
-- node index.js --action remove --id 'podaj usuwane id'
+  ![CLI-App - action-add](action-add.jpg)
+  ![CLI-App - actionList-after--add](actionList-after--add.jpg)
+- node index.js --action remove --id enter the id to be deleted
+  ![CLI-App - action-remove](action-remove.jpg)
+  ![CLI-App - actionList-after--remove](actionList-after--remove.jpg)
 
 ## Project Structure
 
